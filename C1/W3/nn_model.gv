@@ -1,0 +1,56 @@
+digraph nn {
+	rankdir=LR
+	node [shape=circle]
+	ranksep=1;
+	// node [shape=plain]
+	// node [shape=plaintext]
+	// node [shape=circle]
+	{
+		node [shape=plain]
+		layer_0_node_0 [label="$x_1$"];
+		layer_0_node_1 [label="$x_2$"];
+		layer_0_node_2 [label="$x_3$"];
+		// layer_1_node_3;
+	}
+	{
+		layer_1_node_0 [label=""];
+		layer_1_node_1 [label=""];
+		layer_1_node_2 [label=""];
+		layer_1_node_3 [label=""];
+	}
+	{
+		layer_2_node_0 [label=""];
+		// layer_2_node_1 [label=""];
+		// layer_2_node_2 [label=""];
+	}
+	{
+		node [shape=plain]
+		layer_3_node_0 [label="$\hat{y}$"];
+	}
+	{
+		layer_0_node_0 -> layer_1_node_0
+		layer_0_node_1 -> layer_1_node_0
+		layer_0_node_2 -> layer_1_node_0
+
+		layer_0_node_0 -> layer_1_node_1
+		layer_0_node_1 -> layer_1_node_1
+		layer_0_node_2 -> layer_1_node_1
+
+		layer_0_node_0 -> layer_1_node_2
+		layer_0_node_1 -> layer_1_node_2
+		layer_0_node_2 -> layer_1_node_2
+
+		layer_0_node_0 -> layer_1_node_3
+		layer_0_node_1 -> layer_1_node_3
+		layer_0_node_2 -> layer_1_node_3
+	}
+	{
+		layer_1_node_0 -> layer_2_node_0
+		layer_1_node_1 -> layer_2_node_0
+		layer_1_node_2 -> layer_2_node_0
+		layer_1_node_3 -> layer_2_node_0
+	}
+	{
+		layer_2_node_0 -> layer_3_node_0
+	}
+}
