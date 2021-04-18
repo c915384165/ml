@@ -8,50 +8,131 @@ digraph nn {
 
 	{
 		node [shape=plain]
-		layer_0_node_0 [label="x_1"];
-		layer_0_node_1 [label="x_2"];
-		layer_0_node_2 [label="x_3"];
+		layer_0_node_0 [
+							image="/Users/macpro/ml/C1/W2/x1.png",
+							imagescale=True,
+							label="", 
+							shape=plaintext,
+							width=0.25,
+							fixedsize=True,
+						];
+		layer_0_node_1 [
+							image="/Users/macpro/ml/C1/W2/x2.png",
+							imagescale=True,
+							label="", 
+							shape=plaintext,
+							width=0.25,
+							fixedsize=True,
+						];
+		// layer_0_node_2 [label="x_3"];
 		// layer_1_node_3;
 	}
 	{
 		layer_1_node_0 [label=""];
 		layer_1_node_1 [label=""];
 		layer_1_node_2 [label=""];
-		layer_1_node_3 [label=""];
+		// layer_1_node_3 [label=""];
 	}
 	{
 		layer_2_node_0 [label=""];
-		// layer_2_node_1 [label=""];
-		// layer_2_node_2 [label=""];
+		layer_2_node_1 [label=""];
+		layer_2_node_2 [label=""];
+		layer_2_node_3 [label=""];
+		layer_2_node_4 [label=""];
+	}
+	{
+		layer_3_node_0 [label=""];
+		layer_3_node_1 [label=""];
+		layer_3_node_2 [label=""];
+		layer_3_node_3 [label=""];
+		// layer_3_node_4 [label=""];
+	}
+	{
+		layer_4_node_0 [label=""];
+		layer_4_node_1 [label=""];
+		// layer_3_node_2 [label=""];
+		// layer_3_node_3 [label=""];
+		// layer_3_node_4 [label=""];
+	}
+	{
+		layer_5_node_0 [label=""];
 	}
 	{
 		node [shape=plain]
-		layer_3_node_0 [label="hat{y}"];
+		layer_6_node_0 [image="/Users/macpro/ml/C1/W2/yhat600.png",imagescale=True,width=0.15,label="", shape=plaintext,fixedsize=True];
 	}
 	{
 		layer_0_node_0 -> layer_1_node_0
-		layer_0_node_1 -> layer_1_node_0
-		layer_0_node_2 -> layer_1_node_0
-
 		layer_0_node_0 -> layer_1_node_1
-		layer_0_node_1 -> layer_1_node_1
-		layer_0_node_2 -> layer_1_node_1
-
 		layer_0_node_0 -> layer_1_node_2
-		layer_0_node_1 -> layer_1_node_2
-		layer_0_node_2 -> layer_1_node_2
 
-		layer_0_node_0 -> layer_1_node_3
-		layer_0_node_1 -> layer_1_node_3
-		layer_0_node_2 -> layer_1_node_3
+		layer_0_node_1 -> layer_1_node_0
+		layer_0_node_1 -> layer_1_node_1
+		layer_0_node_1 -> layer_1_node_2
 	}
 	{
 		layer_1_node_0 -> layer_2_node_0
+		layer_1_node_0 -> layer_2_node_1
+		layer_1_node_0 -> layer_2_node_2
+		layer_1_node_0 -> layer_2_node_3
+		layer_1_node_0 -> layer_2_node_4
+
 		layer_1_node_1 -> layer_2_node_0
+		layer_1_node_1 -> layer_2_node_1
+		layer_1_node_1 -> layer_2_node_2
+		layer_1_node_1 -> layer_2_node_3
+		layer_1_node_1 -> layer_2_node_4
+
 		layer_1_node_2 -> layer_2_node_0
-		layer_1_node_3 -> layer_2_node_0
+		layer_1_node_2 -> layer_2_node_1
+		layer_1_node_2 -> layer_2_node_2
+		layer_1_node_2 -> layer_2_node_3
+		layer_1_node_2 -> layer_2_node_4
 	}
 	{
 		layer_2_node_0 -> layer_3_node_0
+		layer_2_node_0 -> layer_3_node_1
+		layer_2_node_0 -> layer_3_node_2
+		layer_2_node_0 -> layer_3_node_3
+
+		layer_2_node_1 -> layer_3_node_0
+		layer_2_node_1 -> layer_3_node_1
+		layer_2_node_1 -> layer_3_node_2
+		layer_2_node_1 -> layer_3_node_3
+
+		layer_2_node_2 -> layer_3_node_0
+		layer_2_node_2 -> layer_3_node_1
+		layer_2_node_2 -> layer_3_node_2
+		layer_2_node_2 -> layer_3_node_3
+
+		layer_2_node_3 -> layer_3_node_0
+		layer_2_node_3 -> layer_3_node_1
+		layer_2_node_3 -> layer_3_node_2
+		layer_2_node_3 -> layer_3_node_3
+
+		layer_2_node_4 -> layer_3_node_0
+		layer_2_node_4 -> layer_3_node_1
+		layer_2_node_4 -> layer_3_node_2
+		layer_2_node_4 -> layer_3_node_3
+	}
+	{
+		layer_3_node_0 -> layer_4_node_0
+		layer_3_node_0 -> layer_4_node_1
+
+		layer_3_node_1 -> layer_4_node_0
+		layer_3_node_1 -> layer_4_node_1
+
+		layer_3_node_2 -> layer_4_node_0
+		layer_3_node_2 -> layer_4_node_1
+
+		layer_3_node_3 -> layer_4_node_0
+		layer_3_node_3 -> layer_4_node_1
+	}
+	{
+		layer_4_node_0 -> layer_5_node_0
+		layer_4_node_1 -> layer_5_node_0
+	}
+	{
+		layer_5_node_0 -> layer_6_node_0
 	}
 }
